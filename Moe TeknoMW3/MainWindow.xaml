@@ -1,0 +1,90 @@
+﻿<Window x:Class="Moe_TeknoMW3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Moe_TeknoMW3"
+        mc:Ignorable="d"
+        Title="Moe TeknoMW3" Height="495" Width="895" AllowsTransparency="True" Background="{x:Null}" ResizeMode="NoResize" WindowStyle="None" Icon="logo.ico" Loaded="Started">
+    <Window.Resources>
+        <Color x:Key="Color1">#FF0097FF</Color>
+        <Color x:Key="Color2">#FF007DD3</Color>
+        <Color x:Key="Color3">#FFD38600</Color>
+        <Color x:Key="Color4">#FFFF9700</Color>
+    </Window.Resources>
+    <Grid x:Name="Grid1" Height="495" VerticalAlignment="Top" HorizontalAlignment="Left" Width="895">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="32*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="Window" HorizontalAlignment="Left" Height="139" Margin="30,215,0,0" VerticalAlignment="Top" Width="540" Background="White" MouseLeftButtonDown="OMLBD" Grid.ColumnSpan="2" Grid.Column="1">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
+            </Grid.Effect>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="251"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="26,20,0,0" TextWrapping="Wrap" Text="主机IP:端口" VerticalAlignment="Top" FontFamily="Source Han Sans Light" FontSize="24" Height="41">
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="3"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="36" Margin="166,20,0,0" TextWrapping="Wrap" Text="127.0.0.1:27016" VerticalAlignment="Top" Width="364" Background="#00000000" SelectionBrush="White" FontFamily="Segoe WP Light" FontSize="24" Grid.ColumnSpan="2">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource Color2}"/>
+                </TextBox.BorderBrush>
+                <TextBox.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="7"/>
+                </TextBox.Effect>
+            </TextBox>
+            <Button x:Name="button1" Content="设置" HorizontalAlignment="Left" Margin="51,95,0,0" VerticalAlignment="Top" Width="86" Background="#33FFFFFF" BorderBrush="{x:Null}" Foreground="Black" Height="34" FontSize="16" FontFamily="Source Han Sans Light" Click="button1_Click" Grid.Column="1">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="3"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="button2" Content="一键满级" HorizontalAlignment="Left" Margin="240,95,0,0" VerticalAlignment="Top" Width="86" Background="#33FFFFFF" BorderBrush="{x:Null}" Foreground="Black" Height="34" FontSize="16" FontFamily="Source Han Sans Light" Click="button2_Click" Grid.ColumnSpan="2" IsEnabled="False">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="3"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+        <Grid x:Name="Version" HorizontalAlignment="Left" Height="77" VerticalAlignment="Top" Width="540" Grid.ColumnSpan="2" Grid.Column="1" Margin="30,138,0,0" MouseLeftButtonDown="MLBD" Background="#FF007DD3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="251*"/>
+                <ColumnDefinition Width="59*"/>
+                <ColumnDefinition Width="170*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
+            </Grid.Effect>
+            <Label x:Name="label1" Content="TeknoMW3 Verson:Unknown" HorizontalAlignment="Left" Margin="10,-3,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe WP SemiLight" Foreground="White"/>
+            <Label x:Name="label" Content="     Welcome:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe WP Light" FontSize="24" Height="51" Width="539" Foreground="White" Margin="0,26,0,0" Grid.ColumnSpan="4">
+                <Label.Background>
+                    <SolidColorBrush Color="#FF0097FF"/>
+                </Label.Background>
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="0"/>
+                </Label.Effect>
+            </Label>
+        </Grid>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="446" Margin="23,10,0,0" VerticalAlignment="Top" Width="281" Source="22223403200.png" StretchDirection="DownOnly" Stretch="Fill" Grid.Column="2" MouseLeftButtonDown="MLBD1">
+            <Image.Effect>
+                <DropShadowEffect ShadowDepth="1" Direction="270" BlurRadius="7.5"/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="70" Margin="178,280,0,0" VerticalAlignment="Top" Width="65" Source="未标题-3.png" MouseLeftButtonDown="Exit" Grid.Column="2" Opacity="0.8">
+            <Image.Effect>
+                <DropShadowEffect Direction="270" Opacity="0.8" BlurRadius="10"/>
+            </Image.Effect>
+        </Image>
+        <Button x:Name="button" Content="启动!" HorizontalAlignment="Left" Margin="38,309,0,0" VerticalAlignment="Top" Width="87" Height="35" Click="button_Click" FontFamily="Source Han Sans Light" FontSize="16" BorderBrush="{x:Null}" Background="#990080FF" Foreground="White" Grid.Column="2">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>
